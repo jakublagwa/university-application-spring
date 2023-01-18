@@ -13,6 +13,8 @@ repositories {
 }
 
 dependencies {
+	implementation 'org.thymeleaf:thymeleaf:3.0.11.RELEASE'
+    implementation 'org.thymeleaf:thymeleaf-spring5:3.0.11.RELEASE'
 	implementation 'org.springframework.security:spring-security-web:5.4.3'
     implementation 'org.springframework.security:spring-security-config:5.4.3'
 	implementation 'javax.servlet:javax.servlet-api:4.0.1'
