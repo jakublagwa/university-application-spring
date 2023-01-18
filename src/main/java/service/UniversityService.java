@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-//TODO: adding to build.gradle implementation
 import javax.transaction.Transactional;
 
 import pojo.UniversityPojo;
