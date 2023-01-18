@@ -13,6 +13,9 @@ repositories {
 }
 
 dependencies {
+	implementation 'log4j:log4j:1.2.17'
+	implementation 'org.apache.commons:commons-dbcp2:2.8.0'
+	implementation 'org.springframework:spring-orm:5.2.11.RELEASE'
 	implementation 'commons-io:commons-io:2.8.0'
 	implementation 'org.springframework:spring-webmvc:5.2.11.RELEASE'
 	implementation 'org.thymeleaf:thymeleaf-spring4:3.0.11.RELEASE'
