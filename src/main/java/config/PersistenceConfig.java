@@ -18,7 +18,7 @@ public class PersistenceConfig {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        //TODO: pierwszy bug jak to rozwiązać hmmm
+        //FIXME: buidl paths does not work
         sessionFactory.setPackagesToScan("");
         sessionFactory.setHibernateProperties(hibernateProperties());
         return sessionFactory;
