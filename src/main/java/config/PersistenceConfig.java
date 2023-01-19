@@ -18,7 +18,8 @@ public class PersistenceConfig {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan("com.twoje.projekt.nazwa.pakietu");
+        //TODO: pierwszy bug jak to rozwiązać hmmm
+        sessionFactory.setPackagesToScan("");
         sessionFactory.setHibernateProperties(hibernateProperties());
         return sessionFactory;
     }
