@@ -5,7 +5,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-import javax.transaction.Transactional;
+//FIXME: complete usage of springframework than
+//javax persistence
+
+//import javax.transaction.Transactional;
 
 import pojo.UniversityPojo;
 

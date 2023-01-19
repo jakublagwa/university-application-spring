@@ -1,8 +1,11 @@
 package dao;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
+
+import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
+
+//import javax.persistence.EntityManager;
+//import javax.persistence.PersistenceContext;
+//import javax.persistence.TypedQuery;
 
 public abstract class AbstractDao {
 

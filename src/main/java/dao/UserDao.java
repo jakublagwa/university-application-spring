@@ -2,9 +2,10 @@ package dao;
 
 import java.util.List;
 
-import javax.persistence.Query;
-import javax.persistence.TypedQuery;
+//import javax.persistence.Query;
+//import javax.persistence.TypedQuery;
 
+import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Repository;
 
