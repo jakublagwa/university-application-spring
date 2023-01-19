@@ -6,7 +6,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
-import javax.transaction.Transactional;
+
+import org.springframework.context.annotation.Bean;
 
 import pojo.UniversityPojo;
 
@@ -19,7 +20,7 @@ public class UniversityDao extends AbstractDao{
 	@PersistenceContext
 	private EntityManager em;
 	
-	@Transactional
+	@Bean(initMethod="init")
 	public void insert(UniversityPojo p) {
 		em.persist(p);
 	}
