@@ -1,0 +1,160 @@
+<!doctype html>
+
+<html lang="en">
+
+<head th:replace="snippets.html :: name_head"></head>
+
+<body>
+
+<nav th:replace="snippets.html :: name_app_navbar"></nav>
+
+<div class="container">
+
+<h3>Employees</h3>
+
+ <!-- Top row with form-->
+ <div class="row">
+	 <div class="col-12">
+			<form class="form-inline" id="employee-form">
+			  <div class="form-group">
+			    <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+			    <div class="col-sm-10">
+			      <input type="text" class="form-control" name="name" id="inputName" placeholder="enter name">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputAge" class="col-sm-2 col-form-label">Age</label>
+			    <div class="col-sm-10">
+			      <input type="text" class="form-control" name="age" id="inputAge" placeholder="enter age">
+			    </div>
+			  </div>
+			  <button type="button" class="btn btn-primary" id="add-employee">Add</button>
+			  &nbsp;
+			  <button type="button" class="btn btn-primary" id="refresh-data">Refresh</button>
+			  &nbsp;
+			  <button type="button" class="btn btn-primary" id="upload-data">Upload</button>
+			</form>
+	 </div>	
+</div> 
+
+
+<!-- Blank Row -->
+<div class="row">
+	&nbsp;
+</div>
+<div class="row">
+
+ <!-- Table -->
+ <div class="col-12">
+	<table class="table table-striped" id="employee-table">
+	  <thead>
+	    <tr>
+	      <th scope="col">ID</th>
+	      <th scope="col">Name</th>
+	      <th scope="col">Age</th>
+	      <th scope="col">Actions</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <td>1</td>
+	      <td>Romil Jain</td>
+	      <td>30</td>
+	      <td>Edit | Delete</td>
+	    </tr>
+	    <tr>
+	      <td>2</td>
+	      <td>Rajul Jain</td>
+	      <td>31</td>
+	      <td>Edit | Delete</td>
+	    </tr>
+	    <tr>
+	      <td>3</td>
+	      <td>Anaisha Jain</td>
+	      <td>7</td>
+	      <td>Edit | Delete</td>
+	    </tr>
+	  </tbody>
+	</table>
+
+</div>
+</div>
+
+<!-- Employee Edit Modal -->
+<div class="modal" tabindex="-1" role="dialog" id="edit-employee-modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Edit Employee</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+			<form class="form-inline" id="employee-edit-form">
+			  <div class="form-group">
+			    <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+			    <div class="col-sm-10">
+			      <input type="text" class="form-control" name="name" placeholder="enter name">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputAge" class="col-sm-2 col-form-label">Age</label>
+			    <div class="col-sm-10">
+			      <input type="text" class="form-control" name="age" placeholder="enter age">
+			    </div>
+			  </div>
+ 	        <input type="hidden" name="id" >
+			</form>        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" id="update-employee">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Employee Edit Modal -->
+<div class="modal" tabindex="-1" role="dialog" id="upload-employee-modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h5 class="modal-title">Upload Employee</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+      	<div class="employee-file">
+		  <input type="file" class="custom-file-input" id="employeeFile">
+		  <label class="custom-file-label" for="employeeFile" id="employeeFileName">Choose file</label>
+		</div>
+		<a th:href="@{/sample/employee.tsv}" target="_blank">Download Sample</a> 
+		<br>
+		Rows: <span id="rowCount">0</span>, 
+		Processed: <span id="processCount">0</span>, 
+		Errors: <span id="errorCount">0</span>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" id="process-data">Upload</button>
+        <button type="button" class="btn btn-warning" id="download-errors">Download Errors</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div> <!-- Container end-->
+
+<footer th:replace="snippets.html :: name_footer"></footer>
+
+<script th:src="@{/static/employee.js}"/></script>
+
+</body>	
+
+</html>
