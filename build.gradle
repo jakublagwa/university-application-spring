@@ -35,7 +35,7 @@ dependencies {
 	implementation 'io.springfox:springfox-swagger2:2.9.2'
     implementation 'io.springfox:springfox-swagger-ui:2.9.2'
 	implementation 'org.springframework:spring-tx:5.3.4'
-	implementation 'javax.persistence:javax.persistence-api:2.2'
+	//implementation 'javax.persistence:javax.persistence-api:2.2'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
