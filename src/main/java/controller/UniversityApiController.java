@@ -21,7 +21,7 @@ import service.UniversityService;
 
 @Api
 @RestController
-public class EmployeeApiController {
+public class UniversityApiController {
 
 	@Autowired
 	private UniversityService service;

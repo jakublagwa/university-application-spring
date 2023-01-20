@@ -22,6 +22,14 @@ public class LoginControllerTest {
 	@Autowired
 	private MockMvc mockMvc;
 	
+	
+	/*uwaga
+	 * można użyć tu param() mimo braku zimportowania 
+	 * ponieważ post() zwraca obiekt
+	 * MockHttpServletRequestBuilder który posiada param
+	 * jest to wzorzec javy który nazywa się łańcuchem
+	 * metod
+	 */
 	@Test
 	public void loginTest() throws Exception{
 		mockMvc.perform(post("/session/login")
