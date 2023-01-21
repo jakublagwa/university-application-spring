@@ -58,19 +58,19 @@
 	  <tbody>
 	    <tr>
 	      <td>1</td>
-	      <td>Romil Jain</td>
+	      <td>name surname</td>
 	      <td>30</td>
 	      <td>Edit | Delete</td>
 	    </tr>
 	    <tr>
 	      <td>2</td>
-	      <td>Rajul Jain</td>
+	      <td>name surname</td>
 	      <td>31</td>
 	      <td>Edit | Delete</td>
 	    </tr>
 	    <tr>
 	      <td>3</td>
-	      <td>Anaisha Jain</td>
+	      <td>name surname</td>
 	      <td>7</td>
 	      <td>Edit | Delete</td>
 	    </tr>
@@ -81,7 +81,7 @@
 </div>
 
 <!-- Employee Edit Modal -->
-<div class="modal" tabindex="-1" role="dialog" id="edit-employee-modal">
+<div class="modal" tabindex="-1" role="dialog" id="edit-university-modal">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -91,7 +91,7 @@
         </button>
       </div>
       <div class="modal-body">
-			<form class="form-inline" id="employee-edit-form">
+			<form class="form-inline" id="university-edit-form">
 			  <div class="form-group">
 			    <label for="inputName" class="col-sm-2 col-form-label">Name</label>
 			    <div class="col-sm-10">
@@ -109,7 +109,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-primary" id="update-employee">Update</button>
+        <button type="button" class="btn btn-primary" id="update-university">Update</button>
       </div>
     </div>
   </div>
@@ -117,7 +117,7 @@
 
 
 <!-- Employee Edit Modal -->
-<div class="modal" tabindex="-1" role="dialog" id="upload-employee-modal">
+<div class="modal" tabindex="-1" role="dialog" id="upload-university-modal">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       
@@ -129,11 +129,11 @@
       </div>
       
       <div class="modal-body">
-      	<div class="employee-file">
-		  <input type="file" class="custom-file-input" id="employeeFile">
-		  <label class="custom-file-label" for="employeeFile" id="employeeFileName">Choose file</label>
+      	<div class="university-file">
+		  <input type="file" class="custom-file-input" id="universityFile">
+		  <label class="custom-file-label" for="employeeFile" id="universityFileName">Choose file</label>
 		</div>
-		<a th:href="@{/sample/employee.tsv}" target="_blank">Download Sample</a> 
+		<a th:href="@{/sample/university.tsv}" target="_blank">Download Sample</a> 
 		<br>
 		Rows: <span id="rowCount">0</span>, 
 		Processed: <span id="processCount">0</span>, 
