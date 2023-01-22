@@ -1,5 +1,7 @@
 package config;
 
+import org.springframework.cache.CacheManager;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -13,6 +15,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc
+@EnableCaching
 @ComponentScan(basePackages = { "packageName" })
 public class WebConfig implements WebMvcConfigurer {
 
@@ -33,6 +36,18 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
+    }
+    
+    //added after debugging: cache2k
+    /*
+     * FIXME:cach2k jest jednym z wielu dostępnych rozwiązań
+     * dla pamięci podręcznej w spring
+     * należy użyć @Cacheable na metodach,które mają być
+     * przechowywane w cache
+     */
+    @Bean
+    public CacheManager cacheManager() {
+    	return new Cache2kCacheManager();
     }
 
 }  

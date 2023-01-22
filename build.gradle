@@ -13,6 +13,10 @@ repositories {
 }
 
 dependencies {
+	//added after debbuging
+	implementation 'org.springframework.boot:spring-boot-starter-batch:2.3.5.RELEASE'
+	implementation 'org.cache2k:cache2k-api:2.3.0'
+    implementation 'org.cache2k:cache2k-spring:2.3.0'
 
 	 implementation 'org.hibernate:hibernate-core:5.4.23.Final'
 	 
